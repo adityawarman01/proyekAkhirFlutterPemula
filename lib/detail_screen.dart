@@ -33,7 +33,8 @@ class DetailScreen extends StatelessWidget {
                         Navigator.pop(context);
                       },
                       ),
-                    )
+                    ),
+                    const FavoriteBtn(),
                   ],
                 ),
                 )
@@ -127,3 +128,28 @@ class DetailScreen extends StatelessWidget {
     );
   }
 }
+
+class FavoriteBtn extends StatefulWidget {
+  const FavoriteBtn({Key? key}) : super(key: key);
+
+  @override
+  _FavouriteBtnState createState() => _FavouriteBtnState();
+  }
+
+  class _FavouriteBtnState extends State<FavoriteBtn>{
+    bool isFavorite = false;
+
+    @override
+    Widget build(BuildContext context) {
+      return IconButton(icon: Icon(
+        isFavorite ? Icons.favorite : Icons.favorite_border,
+        color: Colors.red,
+      ),
+      onPressed: () {
+        setState((){
+          isFavorite = !isFavorite;
+        });
+      },
+      );
+    }
+  }
