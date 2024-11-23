@@ -51,6 +51,8 @@ class DetailScreen extends StatelessWidget {
                       },
                       ),
                     ),
+
+                    const FavoriteBtn(),
                   ],
                 ),
                 )
