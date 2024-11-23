@@ -70,7 +70,6 @@ class MainScreen extends StatelessWidget {
                             builder: (context) {
                             return  DetailScreen(place: place);
                       }),
-                          
                         );
                       },
                       child: Column(
@@ -78,7 +77,7 @@ class MainScreen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Container(
-                              color: Colors.grey[300],
+                               color: Colors.grey[300],
                               child: Image.asset(
                                  place.imageAsset,
                                 fit: BoxFit.fitHeight,
